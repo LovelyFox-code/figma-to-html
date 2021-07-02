@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>FinScore</title>
 </head>
 
 <body>
     <header>
-        <nav class="rectangle">
+        <!-- <nav class="rectangle">
             <div class=" text logo">Vkursi Pro</div>
 
             <ul class="nav-items">
@@ -64,117 +70,169 @@
                     <img class="contact" src="./image/arrow-down.svg" alt="" />
                 </li>
             </ul>
+        </nav> -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Vkursi Pro</a>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">Vkursi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">VSUDI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">MARKET BI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">ZEMLI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">HROMADA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">API</a>
+                    </li>
+                </ul class="navbar-nav mr-auto">
+                <ul class="nav-item">
+                    <li class="nav-item">
+                        <i class="bi bi-telephone-fill "></i>
+                        <i class="bi bi-chevron-down"></i>
+                    </li>
+                    <li class="nav-item">
+
+                        <i class="bi bi-person-fill "></i>
+                        <i class="bi bi-chat-square-dots "></i>
+                        <i class="bi bi-chevron-down "></i>
+                    </li>
+                    <li class="nav-item">
+                        <p>Мій кабінет</p>
+                        <i class="bi bi-chevron-down "></i>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <div class="search">
-            <div class="label">
-                <label for="site-search">Пошук</label>
-            </div>
-            <div class="input">
-                <input type="search" id="site-search" name="q"
-                    placeholder="Введіть: назву компанії або код ЄДРПОУ, ПІБ директора або засновника">
-            </div>
+            <label for="exampleDataList" class="form-label">Пошук</label>
+            <input class="form-control" list="datalistOptions" id="exampleDataList"
+                placeholder="Введіть: назву компанії або код ЄДРПОУ, ПІБ директора або засновника">
+
         </div>
     </header>
     <section class="info">
-        <div class="left-nav">
-            <ul class="menu">
-                <li>Ринковий скоринг</li>
-                <li>Експрес-аналіз</li>
-                <li>Анкета</li>
-                <li>Зв’язки</li>
-                <li>Податкова</li>
-                <li>Майно</li>
-                <li>Суди</li>
-                <li>Фінанси</li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+        <div class="left-nav ">
+            <ul class="menu list-group list-group-flush">
+                <li class="list-group-item">Ринковий скоринг</li>
+                <li class="list-group-item">Експрес-аналіз</li>
+                <li class="list-group-item">Анкета</li>
+                <li class="list-group-item">Зв’язки</li>
+                <li class="list-group-item">Податкова</li>
+                <li class="list-group-item">Майно</li>
+                <li class="list-group-item">Суди</li>
+                <li class="list-group-item">Фінанси</li>
+                <li class="list-group-item">Персонал</li>
+                <li class="list-group-item">ЗЕД</li>
+                <li class="list-group-item">Тендери</li>
+                <li class="list-group-item">Ліцензії</li>
+                <li class="list-group-item">ТМ, Патенти</li>
+                <li class="list-group-item">Історія змін</li>
+                <li class="list-group-item">Перевірки</li>
             </ul>
-            <ul>
-                <li>Події | моніторинг</li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+            <ul class="menu list-group list-group-flush">
+                <li class="list-group-item">Події | моніторинг</li>
+                <li class="list-group-item">Контроль майна</li>
+                <li class="list-group-item">Безпека 24/7</li>
+                <li class="list-group-item" style="border-width: 0 0 1px;">Мої списки</li>
+                <li class="list-group-item">Аналіз ринків</li>
+                <li class="list-group-item small grey minus-margin">Business intelligence</li>
+                <li class="list-group-item">Аудит існуючої бази</li>
+                <li class="list-group-item small grey minus-margin" style="border-width: 0 0 1px;">Груповий звіт списку
+                    СГД</li>
+                <li class="list-group-item">Тарифи</li>
 
             </ul>
         </div>
-        <div class="main">
-            <h1 style="font-size: 18px;">
-                Фінансовий скоринг компанії
-            </h1>
-           <div class="align grey">
-            <p >
-                Зберегти досьє в:
-                <img src="./image/pdf.svg" alt="">
-                <img src="./image/print.svg" alt="">
-                <img src="./image/xlx.svg" alt="">
-                <img src="./image/share.svg" alt="">
-                <img src="./image/arrow.svg" alt="">Поділитися
-                <img src="./image/folder.svg" alt="">Додати до списку
-                
 
-            </p>
-           </div>
+        <section class="info-main">
+            <div class="main">
+                <h1>ТОВ “ВЕБ ДРІМ ТЕХНОЛОДЖІ”</h1>
+                <h1 style="font-size: 18px;">
+                    Фінансовий скоринг компанії
+                </h1>
+                <div class="align grey">
+                    <p>
+                        Зберегти досьє в:
+                        <img src="./image/pdf.svg" alt="">
+                        <img src="./image/print.svg" alt="">
+                        <img src="./image/xlx.svg" alt="">
+                        <img src="./image/share.svg" alt="">
+                        <img src="./image/arrow.svg" alt="">Поділитися
+                        <img src="./image/folder.svg" alt="">Додати до списку
 
-            <div class="bakertilly">
-                <div class="bak-logo">
-                    <img src="./image/bakerilly.svg" alt="">
-                    <p class="bak-p">За методологією</p>
+
+                    </p>
                 </div>
-                <div class="bak-info">
-                    Розроблено спільно з ТОВ “БЕЙКЕР ТІЛЛІ УКРАЇНА”, яка є членом Baker Tilly International Ltd – однієї
-                    з ТОП-10 найкращих світових мереж незалежних бухгалтерських та консалтингових компаній.
+
+                <div class="bakertilly">
+                    <div class="bak-logo">
+                        <img src="./image/bakerilly.svg" alt="">
+                        <p class="bak-p">За методологією</p>
+                    </div>
+                    <div class="bak-info">
+                        Розроблено спільно з ТОВ “БЕЙКЕР ТІЛЛІ УКРАЇНА”, яка є членом Baker Tilly International Ltd –
+                        однієї
+                        з ТОП-10 найкращих світових мереж незалежних бухгалтерських та консалтингових компаній.
+                    </div>
                 </div>
             </div>
             <div class="fin-score">
                 <div class="fin-section">
-                    <h3>Загальна оцінка компанії</h3>
+                    <h3 id="zagalna">Загальна оцінка компанії</h3>
                     <div class="content">
                         <div class="container">
                             <div class="block">
                                 <p>Ділова активність</p>
                                 <div class="block-error">
-                                    <img src="./image/arrow-danger.svg" alt=""> <span class="error-light">3.25</span>
+                                    <img src="./image/arrow-danger.svg" alt=""> <span class="error-light"
+                                        id="dilova">3.25</span>
                                     <p>Негативна оцінка</p>
                                 </div>
                             </div>
                             <div class="block">
                                 <p>Рентабельність</p>
                                 <div class="block-error">
-                                    <img src="./image/arrow-danger.svg" alt=""> <span class="error-light">3.25</span>
+                                    <img src="./image/arrow-danger.svg" alt=""> <span class="error-light"
+                                        id="rentabelnist">3.25</span>
                                     <p>Позитивна оцінка</p>
                                 </div>
                             </div>
                             <div class="block">
                                 <p>Операційна ефективність</p>
                                 <div class="block-green">
-                                    <img src="./image/arrow-green.svg" alt=""> <span class="error-light">3.25</span>
+                                    <img src="./image/arrow-green.svg" alt=""> <span class="green"
+                                        id="efektyvnist">3.25</span>
                                     <p>Позитивна оцінка</p>
                                 </div>
                             </div>
                             <div class="block">
                                 <p>Фінансове здоров’я</p>
                                 <div class="block-orange">
-                                    <img src="./image/arrow-orange.svg" alt=""> <span class="error-light">3.25</span>
+                                    <img src="./image/arrow-orange.svg" alt=""> <span class="attention_light"
+                                        id="finZdorovya">3.25</span>
                                     <p>Прийнятна оцінка</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <p class="grey">Детальний розрахунок фінансових і операційних показників</p>
+                    <p class="grey center">Детальний розрахунок фінансових і операційних показників</p>
                 </div>
                 <div class="fin-section">
-                    <h3>Ділова активність</h3>
+                    <h3 id="dilovaAktyvnist">Ділова активність</h3>
                     <div class="content">
                         <div class="title">
-                            <p class="left">Загальна оцінка: <span class="error-light">Негативна</span>|Сума по блокам
+                            <p class="left center">Загальна оцінка: <span class="error-light">Негативна</span>|Сума по
+                                блокам
                                 показників: <span class="error-light">3.25</span></p>
                             <p class="right-blue">Методологія <img src="./image/arrow-blue.svg" alt="" /></p>
                         </div>
@@ -190,42 +248,47 @@
 
                 <div class="data">
                     <div class="data-block">
-                        <div class="name">Виручка</div>
-                        <div class="graphic"><img src="./image/График.svg" alt=""></div>
+                        <div class="name" id="vyruchka">Виручка</div>
+                        <div class="graphic" id="dynamika">
+                            <canvas id="chart" style="width:100%;max-width:600px"></canvas>
+                        </div>
                         <div class="score">
                             <img src="./image/arrow-danger.svg" alt=""><span class="error-light">Негативна оцінка</span>
                             <p>Спостерігається стабільне зниження виручки, що є негативним сигналом про скорочення
                                 бізнесу</p>
-                            <p class="grey">Значимість: 0,35 | Оцінка: <span class="error-light">0</span>| Значення:
-                                <span class="error-light">0</span> </p>
+                            <p class="grey">Значимість: <span id="znachymist">0,35</span> | Оцінка: <span
+                                    class="error-light" id="otsinka">0</span>| Значення:
+                                <span class="error-light" id="pidsumkoveZnachennya">0</span> </p>
                         </div>
                     </div>
                     <div class="data-block">
                         <div class="name">Валюта балансу</div>
-                        <div class="graphic"><img src="./image/График.svg" alt=""></div>
+                        <div class="graphic"><img src="./image/График 2.svg" alt=""></div>
                         <div class="score">
                             <img src="./image/arrow-orange.svg" alt=""><span class="attention_light">Прийнятна
                                 оцінка</span>
                             <p>Зміна суми активів нестійка, що може свідчити про проблеми, які можуть впливати на стійке
                                 зростання бізнесу в майбутньому та вимагають поглибленого дослідження</p>
-                            <p class="grey">Значимість: 0,35 | Оцінка: <span class="attention_light">5</span>| Значення:
+                            <p class="grey">Значимість: <span id="znachymist">0,35</span> | Оцінка: <span
+                                    class="attention_light">5</span>| Значення:
                                 <span class="attention_light">1.25</span> </p>
                         </div>
                     </div>
                     <div class="data-block">
                         <div class="name">Оборотний капітал, тис. грн</div>
-                        <div class="graphic"><img src="./image/График.svg" alt=""></div>
+                        <div class="graphic"><img src="./image/График 3.svg" alt=""></div>
                         <div class="score">
                             <img src="./image/arrow-orange.svg" alt=""><span class="attention_light">Прийнятна
                                 оцінка</span>
                             <p>Зміна оборотного капіталу нестійка</p>
-                            <p class="grey">Значимість: 0,35 | Оцінка: <span class="attention_light">5</span> |
+                            <p class="grey">Значимість: <span id="znachymist">0,35</span> | Оцінка: <span
+                                    class="attention_light">5</span> |
                                 Значення: <span class="attention_light">1.25</span> </p>
                         </div>
                     </div>
                     <div class="data-block">
                         <div class="name">Частка оборотного капіталу від виручки, %</div>
-                        <div class="graphic"><img src="./image/График.svg" alt=""></div>
+                        <div class="graphic"><img src="./image/График 4.svg" alt=""></div>
                         <div class="score">
                             <img src="./image/arrow-orange.svg" alt=""><span class="attention_light">Прийнятна
                                 оцінка</span>
@@ -237,9 +300,16 @@
                     </div>
                 </div>
             </div>
-    </section>
+        </section>
+        <script type="text/javascript" src="data.json"></script>
+        <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+        
 </body>
-<script type="text/javascript" src="data.json"></script>
-<script src="main.js"></script>
+
+
 
 </html>
