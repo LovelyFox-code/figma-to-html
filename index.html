@@ -7,10 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <title>FinScore</title>
 </head>
 
@@ -76,24 +78,41 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Vkursi Pro</a>
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Всі продукти
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Vkursi</a>
+                            <a class="dropdown-item" href="#">VSUDI</a>
+                            <a class="dropdown-item" href="#">MARKET BI</a>
+                            <a class="dropdown-item" href="#">ZEMLI</a>
+                            <a class="dropdown-item" href="#">HROMADA</a>
+                            <a class="dropdown-item" href="#">API</a>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item active remove">
                         <a href="#" class="nav-link">Vkursi</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item remove">
                         <a href="#" class="nav-link">VSUDI</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item remove">
                         <a href="#" class="nav-link">MARKET BI</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item remove">
                         <a href="#" class="nav-link">ZEMLI</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item remove">
                         <a href="#" class="nav-link">HROMADA</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item remove">
                         <a href="#" class="nav-link">API</a>
                     </li>
+
                 </ul class="navbar-nav mr-auto">
                 <ul class="nav-item">
                     <li class="nav-item">
@@ -186,11 +205,11 @@
                     </div>
                 </div>
             </div>
-            <div class="fin-score">
-                <div class="fin-section">
-                    <h3 id="zagalna">Загальна оцінка компанії</h3>
+            <div class="fin-score" id="fin-score-container">
+                <div id="zagalna">
+                    <h3>Загальна оцінка компанії</h3>
                     <div class="content">
-                        <div class="container">
+                        <div class="contain">
                             <div class="block">
                                 <p>Ділова активність</p>
                                 <div class="block-error">
@@ -306,10 +325,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
-        <script src="index.js"></script>
-        
+
 </body>
-
-
 
 </html>
